@@ -18,13 +18,13 @@ It takes raw articles as input, generates concise summaries, extracts places men
 ---
 
 ## Project Workflow
-1. *Input*: News articles (CSV file with article and highlights columns).
-2. *Preprocessing*: Clean and truncate long texts.
+1. *Input*: News articles (CSV file with article and highlights columns-).
+2. *Preprocessing*: Clean and truncate long texts.(sample preprocessed csv file - train_preprocessed_1000.csv)
 3. *Summarization*: Generate concise summaries with a pre-trained model.
 4. *Location Extraction*: Detect geographical names (GPE entities).
 5. *Geocoding*: Convert place names to latitude and longitude.
 6. *Evaluation*: Compare generated summaries with ground-truth using ROUGE and BERTScore.
-7. *Output*: Save results into a clean CSV with:
+7. *Output*: Save results into a clean CSV named "out_sample1000_final1.csv" with:
    - Original text
    - Generated summary
    - Places found
@@ -41,7 +41,7 @@ git clone https://github.com/Charitha-1823/Text-Summarization-and-Geo-Tagging
 cd Text-Summarization-and-Geo-Tagging
 pip install -r requirements.txt
 
-Run the Pipeline
+Run the Pipeline(ran on 1000 rows of data)
 python summarization_geo_pipeline.py \
   --input /path/to/input.csv \
   --output /path/to/output.csv \
